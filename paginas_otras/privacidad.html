@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Artecnología</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #1a6c28, #1f52b2, #2dfdf3);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .menu-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0288d1;
+            padding: 20px 0 10px 0;
+            border-radius: 12px;
+            margin: 0 auto 25px auto;
+            box-shadow: 0 6px 18px #0288d170;
+        }
+        .menu-bar nav {
+            display: flex;
+            gap: 30px;
+        }
+        .menu-bar nav a {
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 7px 18px;
+            border-radius: 8px;
+            transition: background 0.25s, color 0.25s;
+        }
+        .menu-bar nav a:hover, .menu-bar nav a.active {
+            color: #ffd600;
+            background: rgba(255,255,255,0.10);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #27ae60;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        .last-update {
+            background: #d4edda;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #155724;
+            font-weight: 600;
+            border: 1px solid #c3e6cb;
+        }
+        .intro-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #27ae60;
+        }
+        .intro-section p {
+            color: #323E47;
+            font-size: 1.08rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .content-section {
+            margin-bottom: 35px;
+        }
+        .content-section h2 {
+            color: #1a6c28;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 5px solid #27ae60;
+        }
+        .content-section p {
+            color: #323E47;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .content-section ul {
+            margin: 15px 0 15px 40px;
+            padding-left: 20px;
+        }
+        .content-section ul li {
+            color: #323E47;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .highlight {
+            background: #e0f7fa;
+            color: #018095;
+            font-weight: 600;
+            padding: 2px 7px;
+            border-radius: 4px;
+        }
+        .important-box {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        .important-box strong {
+            color: #0c5460;
+            font-size: 1.1rem;
+        }
+        .important-box p {
+            color: #0c5460;
+            margin-top: 10px;
+        }
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 15px 0;
+        }
+        .contact-box {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .contact-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .contact-link {
+            color: #ffd600;
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .contact-link:hover {
+            border-bottom-color: #ffd600;
+        }
+        .rights-section {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ffc107;
+            margin: 25px 0;
+        }
+        .rights-section h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .rights-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .rights-section ul li {
+            color: #856404;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .rights-section ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #28a745;
+        }
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 25px;
+            border-top: 2px solid #e0e0e0;
+            color: #7f8c8d;
+            font-size: 0.97rem;
+        }
+        @media (max-width: 768px) {
+            .menu-bar nav {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .container {
+                padding: 25px 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .content-section h2 {
+                font-size: 1.3rem;
+            }
+            .content-section p,
+            .content-section ul li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <nav>
+            <a href="../paginas_otras/home.html">Inicio</a>
+    
+            <a href="../paginas_otras/acerca_de_nosotros.html">Acerca de</a>
+            <a href="#" style="color: #ffd600;">Privacidad</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>🔒 Política de Privacidad</h1>
+            <p class="subtitle">Protección de Datos Personales</p>
+        </header>
+
+        <div class="last-update">
+            Última actualización: Octubre 2023
+        </div>
+
+        <div class="intro-section">
+            <p>
+                En <strong>Artecnología</strong>, nos comprometemos a proteger la privacidad y la seguridad de los datos personales de nuestros usuarios. Esta Política de Privacidad describe cómo recopilamos, utilizamos, almacenamos y protegemos la información personal que nos proporcionas al utilizar nuestra plataforma, disponible en <a href="https://www.artecnologia.com" class="contact-link" style="color: #018095;">www.artecnologia.com</a>.
+            </p>
+            <p>
+                Al registrarte o utilizar nuestros servicios, aceptas los términos de esta Política de Privacidad y autorizas el tratamiento de tus datos personales conforme a lo aquí establecido. Si no estás de acuerdo con su contenido, te recomendamos no utilizar la plataforma.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>1. Información que Recopilamos</h2>
+            <p>
+                Recopilamos la información que proporcionas al crear una cuenta o interactuar con la plataforma, tales como:
+            </p>
+            <ul>
+                <li><strong>Datos personales:</strong> Nombre, correo electrónico y contraseña</li>
+                <li><strong>Datos académicos:</strong> Progreso en cursos y actividades realizadas</li>
+                <li><strong>Información técnica:</strong> Dirección IP, tipo de navegador y dispositivo utilizado</li>
+                <li><strong>Estadísticas de uso:</strong> Páginas visitadas, tiempo de permanencia y patrones de navegación</li>
+            </ul>
+            <p>
+                Esta información se recopila con el fin de mejorar la experiencia del usuario y optimizar nuestros servicios.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>2. Uso de la Información</h2>
+            <p>La información personal se utiliza para:</p>
+            <ul>
+                <li>Gestionar tu cuenta y autenticación</li>
+                <li>Permitir el acceso a los cursos y materiales educativos</li>
+                <li>Realizar seguimiento de tu progreso académico</li>
+                <li>Enviarte notificaciones relacionadas con el servicio</li>
+                <li>Responder a tus solicitudes de soporte técnico</li>
+                <li>Mantener la seguridad y prevenir fraudes en el sistema</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>3. Compartir Información con Terceros</h2>
+            <div class="important-box">
+                <strong>🔐 Compromiso de Confidencialidad</strong>
+                <p>
+                    No compartimos tus datos personales con terceros, salvo en los casos en que sea necesario para el cumplimiento de obligaciones legales o por requerimiento de una autoridad competente.
+                </p>
+                <p style="margin-top: 15px; font-size: 1.1rem;">
+                    <strong>En ningún caso vendemos, alquilamos ni comercializamos tu información a otras entidades.</strong>
+                </p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>4. Seguridad de los Datos</h2>
+            <div class="security-badge">
+                <span>🛡️</span>
+                <span>Protección de Datos Implementada</span>
+            </div>
+            <p>
+                <span class="highlight">Artecnología</span> adopta medidas técnicas y organizativas razonables para proteger tus datos contra accesos no autorizados, pérdida, alteración o destrucción. Estas medidas incluyen:
+            </p>
+            <ul>
+                <li>Cifrado de contraseñas y datos sensibles</li>
+                <li>Protocolos de seguridad SSL/TLS</li>
+                <li>Sistemas de detección de intrusiones</li>
+                <li>Acceso restringido a información personal</li>
+            </ul>
+            <p style="margin-top: 15px;">
+                <em>Sin embargo, el usuario reconoce que ningún sistema de transmisión o almacenamiento electrónico es completamente seguro, por lo que no podemos garantizar una seguridad absoluta.</em>
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>5. Derechos del Usuario</h2>
+            <div class="rights-section">
+                <h3>Tus Derechos sobre tus Datos</h3>
+                <ul>
+                    <li>Acceder a tu información personal almacenada</li>
+                    <li>Corregir datos inexactos o incompletos</li>
+                    <li>Actualizar tu información de perfil</li>
+                    <li>Eliminar tu cuenta y datos asociados</li>
+                    <li>Solicitar una copia de tus datos personales</li>
+                </ul>
+            </div>
+            <p>
+                El usuario puede ejercer estos derechos en cualquier momento desde su cuenta o solicitándolo al correo <strong class="highlight">soporte@artecnologia.com</strong>.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Nota importante:</strong> La eliminación de datos puede implicar la desactivación permanente de la cuenta y la pérdida de acceso al contenido asociado.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>6. Modificaciones a la Política</h2>
+            <p>
+                En caso de producirse modificaciones en esta Política de Privacidad, se publicarán en esta misma página, indicando la fecha de la última actualización. El uso continuado de la plataforma después de dichos cambios se interpretará como aceptación de la nueva versión.
+            </p>
+            <p style="margin-top: 15px;">
+                Te recomendamos revisar periódicamente esta página para estar informado sobre cómo protegemos tu información.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>7. Legislación Aplicable</h2>
+            <p>
+                Esta Política se rige por las leyes de <span class="highlight">Colombia</span>, y cualquier disputa relacionada con su interpretación o aplicación será resuelta por los tribunales competentes del país.
+            </p>
+            <p style="margin-top: 15px;">
+                Cumplimos con todas las normativas de protección de datos personales vigentes en Colombia, incluyendo la Ley 1581 de 2012 y sus decretos reglamentarios.
+            </p>
+        </div>
+
+        <div class="contact-box">
+            <h3>📧 ¿Tienes preguntas sobre tu privacidad?</h3>
+            <p>Si tienes dudas sobre esta Política de Privacidad o deseas ejercer tus derechos sobre tus datos personales, contáctanos:</p>
+            <p style="font-size: 1.2rem; margin-top: 15px;">
+                <strong>Email:</strong> <a href="mailto:soporte@artecnologia.com" class="contact-link">soporte@artecnologia.com</a>
+            </p>
+            <p style="margin-top: 10px;">
+                <strong>Web:</strong> <a href="https://www.artecnologia.com" class="contact-link">www.artecnologia.com</a>
+            </p>
+        </div>
+
+        <footer>
+            <p>Asistente de programación &copy; 2023 - Diseñado para ayudar a desarrolladores</p>
+            <p style="margin-top: 10px;">Artecnología - Comprometidos con tu privacidad</p>
+        </footer>
+    </div>
+</body>
+</html>
