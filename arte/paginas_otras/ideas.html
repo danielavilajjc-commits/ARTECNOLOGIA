@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartado de Ideas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #1a6c28, #1f52b2, #2dfdf3);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .menu-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0288d1;
+            padding: 20px 0 10px 0;
+            border-radius: 12px;
+            margin: 0 auto 25px auto;
+            box-shadow: 0 6px 18px #0288d170;
+        }
+        .menu-bar nav {
+            display: flex;
+            gap: 30px;
+        }
+        .menu-bar nav a {
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 7px 18px;
+            border-radius: 8px;
+            transition: background 0.25s, color 0.25s;
+        }
+        .menu-bar nav a:hover, .menu-bar nav a.active {
+            color: #ffd600;
+            background: rgba(255,255,255,0.10);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            min-height: 500px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+        }
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .empty-icon {
+            font-size: 120px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .empty-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .empty-message {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            max-width: 700px;
+        }
+        .info-box h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .info-box p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .coming-soon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            color: #7f8c8d;
+            font-size: 0.97rem;
+        }
+        @media (max-width: 768px) {
+            .menu-bar nav {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .empty-icon {
+                font-size: 80px;
+            }
+            .empty-title {
+                font-size: 1.5rem;
+            }
+            .empty-message {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <nav>
+            <a href="../paginas_otras/home.html">Inicio</a>
+            
+            <a href="../paginas_otras/acerca_de_nosotros.html">Acerca de</a>
+            <a href="#" style="color: #ffd600;">Ideas</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>💡 Apartado de Ideas</h1>
+            <p class="subtitle">Espacio dedicado a sugerencias y propuestas de la comunidad</p>
+        </header>
+
+        <div class="empty-state">
+            <div class="empty-icon">📭</div>
+            <h2 class="empty-title">No se ha agregado ninguna idea</h2>
+            <p class="empty-message">
+                Este apartado está esperando tus ideas creativas. Por el momento, no hay sugerencias registradas en el sistema.
+            </p>
+            
+            <div class="coming-soon">🚀 Próximamente disponible</div>
+
+            <div class="info-box">
+                <h3>¿Qué es este apartado?</h3>
+                <p>
+                    El apartado de ideas será un espacio donde podrás compartir tus sugerencias para mejorar la plataforma, proponer nuevas funcionalidades, o comentar sobre características que te gustaría ver implementadas.
+                </p>
+                <p>
+                    Una vez activo, podrás ver las ideas de otros usuarios, votarlas, y colaborar en la construcción de una mejor experiencia para todos.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Asistente de programación &copy; 2023 - Diseñado para ayudar a desarrolladores</p>
+        </footer>
+    </div>
+</body>
+</html>
